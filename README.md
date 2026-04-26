@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Orlixys/Orlixys-Optimizer-Source/main/OrlixysOptimizer/Assets/icon.png" width="120" alt="Orlixys Optimizer" />
+<img src="orlixys-logo.svg" width="160" alt="Orlixys" />
 
 # Orlixys Optimizer
 
@@ -8,8 +8,7 @@
 
 [![Latest Release](https://img.shields.io/github/v/release/Orlixys/Orlixys-Optimizer-Releases?label=vers%C3%A3o&style=for-the-badge)](https://github.com/Orlixys/Orlixys-Optimizer-Releases/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/Orlixys/Orlixys-Optimizer-Releases/total?label=downloads&style=for-the-badge)](https://github.com/Orlixys/Orlixys-Optimizer-Releases/releases)
-[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white)](#requisitos)
-[![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](https://github.com/Orlixys/Orlixys-Optimizer-Source/blob/main/LICENSE)
+[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white)](#-requisitos)
 
 ### [⬇️ Baixar para Windows](https://github.com/Orlixys/Orlixys-Optimizer-Releases/releases/latest/download/OrlixysOptimizer-win-Setup.exe)
 
@@ -19,9 +18,9 @@
 
 ## ✨ O que é?
 
-Um aplicativo nativo (.NET 9 + WPF + WebView2) para limpar, otimizar e manter o Windows funcionando como deveria. Foco em **performance, segurança e clareza** — sem instalar dezenas de processos pesados, sem telemetria, sem propagandas.
+Aplicativo nativo para Windows (.NET 9 + WPF + WebView2) focado em **performance, segurança e clareza**. Limpa, otimiza e mantém o sistema rodando como deveria — sem instalar dezenas de processos pesados, sem telemetria, sem propagandas.
 
-## 🚀 Recursos principais
+## 🚀 Recursos
 
 - **Dashboard em tempo real** com CPU, GPU, memória, rede e armazenamento
 - **Otimização rápida** com um clique e ponto de restauração automático
@@ -32,7 +31,7 @@ Um aplicativo nativo (.NET 9 + WPF + WebView2) para limpar, otimizar e manter o 
 - **Cores GPU live** (saturação, brilho, contraste) sem reiniciar o driver
 - **Limpeza de pastas dev** (`node_modules`, `__pycache__`, `bin/`, `obj/`...)
 - **Automação** com tarefas agendadas que rodam em background
-- **Atualização automática** via [Velopack](https://velopack.io) — silenciosa e segura
+- **Atualização automática** silenciosa, em segundo plano
 
 ## 📦 Instalação
 
@@ -42,7 +41,7 @@ Baixe o **[OrlixysOptimizer-win-Setup.exe](https://github.com/Orlixys/Orlixys-Op
 
 ### Versão portátil
 
-Se você prefere não instalar, baixe `OrlixysOptimizer-win-Portable.zip` da [última release](https://github.com/Orlixys/Orlixys-Optimizer-Releases/releases/latest), extraia em qualquer pasta e execute o `.exe`. Atualização automática **não funciona** nessa modalidade.
+Se preferir não instalar, baixe `OrlixysOptimizer-win-Portable.zip` da [última release](https://github.com/Orlixys/Orlixys-Optimizer-Releases/releases/latest), extraia em qualquer pasta e execute o `.exe`. **Atualização automática não funciona** nessa modalidade.
 
 ## 🔧 Requisitos
 
@@ -55,20 +54,20 @@ Se você prefere não instalar, baixe `OrlixysOptimizer-win-Portable.zip` da [ú
 ## ❓ Perguntas frequentes
 
 <details>
-<summary><b>O Windows Defender / SmartScreen bloqueou o instalador. É vírus?</b></summary>
+<summary><b>O Windows Defender ou SmartScreen bloqueou o instalador.</b></summary>
 
-Não. O aviso aparece porque o instalador ainda não tem assinatura digital com certificado EV (que custa cerca de US$ 300/ano). É comum em projetos open source pequenos. Você pode:
+O aviso aparece porque o instalador ainda não tem assinatura digital com certificado EV (custa cerca de US$ 300/ano). É comum em distribuições novas. Para prosseguir:
 
-1. Clicar em **Mais informações** no aviso do SmartScreen
-2. Clicar em **Executar mesmo assim**
+1. Clique em **Mais informações** no aviso do SmartScreen
+2. Clique em **Executar mesmo assim**
 
-Conforme mais usuários instalam, o Windows aprende que o binário é seguro e o aviso some sozinho. O código-fonte está totalmente disponível para auditoria no [repositório privado](https://github.com/Orlixys/Orlixys-Optimizer-Source) (acesso sob solicitação).
+Conforme mais usuários instalam, a reputação do binário aumenta e o aviso desaparece automaticamente.
 </details>
 
 <details>
-<summary><b>Onde o app é instalado?</b></summary>
+<summary><b>Preciso ser administrador para instalar?</b></summary>
 
-`%LocalAppData%\OrlixysOptimizer\current\` — não pede admin para instalar (cada usuário tem sua cópia).
+Não. O instalador faz uma instalação por usuário em `%LocalAppData%\OrlixysOptimizer\` — sem UAC, sem alterar o sistema. Funções específicas do app que exigem admin (alterar serviços, ponto de restauração, hardening) pedem elevação somente quando você as utiliza.
 </details>
 
 <details>
@@ -80,7 +79,7 @@ Conforme mais usuários instalam, o Windows aprende que o binário é seguro e o
 <details>
 <summary><b>O app coleta dados meus?</b></summary>
 
-Não. Sem telemetria, sem analytics, sem chamada para servidores que não sejam o GitHub Releases (apenas para verificar atualizações). Toda configuração fica em `%LocalAppData%\OrlixysOptimizer\` na sua máquina.
+Não. Sem telemetria, sem analytics, sem chamadas para servidores além do GitHub Releases (apenas para verificar atualizações). Toda configuração permanece em `%LocalAppData%\OrlixysOptimizer\` na sua máquina.
 </details>
 
 <details>
@@ -92,7 +91,7 @@ Sim — alterações de hardening do sistema, agendamentos do Windows e ajustes 
 <details>
 <summary><b>Por que o monitoramento detalhado de sensores fica desativado por padrão?</b></summary>
 
-Porque ele depende do driver `WinRing0`, que tem uma CVE conhecida ([CVE-2020-14979](https://nvd.nist.gov/vuln/detail/CVE-2020-14979)). O Defender bloqueia esse driver no histórico de proteção. Se você precisa ver temperatura de CPU e clocks de GPU, pode ativar em **Configurações → Avançado** — mas é uma decisão informada.
+Porque depende de um driver kernel (`WinRing0`) com vulnerabilidade conhecida ([CVE-2020-14979](https://nvd.nist.gov/vuln/detail/CVE-2020-14979)). O Windows Defender bloqueia esse driver no histórico de proteção. Se você precisa ver temperatura de CPU e clocks de GPU, pode habilitar manualmente em **Configurações → Avançado** — mas é uma decisão informada.
 </details>
 
 ## 🐛 Reportar problema
@@ -102,16 +101,16 @@ Porque ele depende do driver `WinRing0`, que tem uma CVE conhecida ([CVE-2020-14
 - Versão do Orlixys Optimizer (visível em **Configurações → Sobre**)
 - Versão do Windows (`winver`)
 - Descrição do problema e passos para reproduzir
-- Screenshot, se for visual
+- Screenshot, se relevante
 
-## 📜 Licença
+## 📜 Termos
 
-[MIT](https://github.com/Orlixys/Orlixys-Optimizer-Source/blob/main/LICENSE) — uso comercial permitido, atribuição apreciada.
+Distribuído gratuitamente. O uso é por sua conta e risco — recomenda-se sempre criar um ponto de restauração antes de aplicar otimizações em larga escala.
 
 ---
 
 <div align="center">
 
-Feito com ❤️ por **[Orlixys](https://github.com/Orlixys)**
+**Orlixys** © 2026
 
 </div>
